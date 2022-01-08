@@ -41,7 +41,7 @@ export default function Board() {
 
     const winner = checkWinner(nextBoard);
     if (winner) {
-      alert(`Winner ${getChar(turn)}`);
+      alert(`Ganador: ${getChar(turn)}`);
       setWon(true);
     }
 
@@ -61,7 +61,7 @@ export default function Board() {
       </div>
 
       <div>
-        <button onClick={restartGame}>Restart game</button>
+        <button onClick={restartGame}>Reiniciar juego</button>
       </div>
     </>
   );
