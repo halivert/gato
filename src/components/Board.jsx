@@ -23,12 +23,11 @@ export default function Board() {
   const checkWinner = (board) => {
     for (let line of winnerPositions) {
       const strLine = line.map(([x, y]) => board[x][y]).join("");
-      if (strLine === "111" || strLine === "222") {
-        return strLine[0];
-      }
+      if (strLine === "111" || strLine === "222") return strLine[0];
     }
 
-    return null;
+    const tie = board.every((row) => row.every((cell) => cell));
+    return tie ? false : null;
   };
 
   const markMe = (x, y) => {
@@ -45,11 +44,12 @@ export default function Board() {
       setWon(true);
     }
 
+    if (winner === false) alert("Empate");
     setTurn(turn === 1 ? 2 : 1);
   };
 
   return (
-    <>
+    <section className="board-container">
       <div className={`board ${won ? "won" : ""}`}>
         {history.slice(-1)[0]?.map((row, y) =>
           row.map((cell, x) => (
@@ -63,6 +63,6 @@ export default function Board() {
       <div>
         <button onClick={restartGame}>Reiniciar juego</button>
       </div>
-    </>
+    </section>
   );
 }

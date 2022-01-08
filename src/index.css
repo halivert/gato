@@ -1,7 +1,13 @@
+.board-container {
+  max-width: 25rem;
+  margin: 0 auto;
+}
+
 .board {
   display: grid;
   gap: 0.5rem;
   grid-template: "a1 a2 a3" 1fr "b1 b2 b3" 1fr "c1 c2 c3" 1fr / 1fr 1fr 1fr;
+  margin-bottom: 1rem;
 }
 
 .board button {
