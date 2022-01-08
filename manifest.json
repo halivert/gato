@@ -1,0 +1,11 @@
+{
+	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
+	"name": "El Gato",
+	"short_name": "Gato",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#1b2a41",
+	"background_color": "#0c1822",
+	"description": "Juego de gato",
+	"lang": "es"
+}
